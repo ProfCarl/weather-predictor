@@ -21,11 +21,11 @@ tmin_models = []
 PKL_DIR = os.path.join(os.path.dirname(__file__), 'pkl')
 
 for i in range(1, 32):
-    rain_models.append(joblib.load(os.path.join(PKL_DIR,f'rain_model{i}.pkl')))
-    humidity_models.append(joblib.load(os.path.join(PKL_DIR,f'humidity_model{i}.pkl')))
-    wind_models.append(joblib.load(os.path.join(PKL_DIR,f'wind_model{i}.pkl')))
-    tmax_models.append(joblib.load(os.path.join(PKL_DIR,f'tmax_model{i}.pkl')))
-    tmin_models.append(joblib.load(os.path.join(PKL_DIR,f'tmin_model{i}.pkl')))
+    rain_models.append(joblib.load(os.path.join(PKL_DIR,'rain_models',f'rain_model{i}.pkl')))
+    humidity_models.append(joblib.load(os.path.join(PKL_DIR,'humidity_models',f'humidity_model{i}.pkl')))
+    wind_models.append(joblib.load(os.path.join(PKL_DIR,'wind_models',f'wind_model{i}.pkl')))
+    tmax_models.append(joblib.load(os.path.join(PKL_DIR,'tmax_models',f'tmax_model{i}.pkl')))
+    tmin_models.append(joblib.load(os.path.join(PKL_DIR,'tmin_models',f'tmin_model{i}.pkl')))
 
 @app.route('/')
 def home():
